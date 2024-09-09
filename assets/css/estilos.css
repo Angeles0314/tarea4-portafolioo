@@ -1,0 +1,374 @@
+* { 
+    margin:  0px;
+    padding: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+     font-family: "Montserrat", sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+:root {
+    /*colores interfaz*/
+    --primario: #E13E65;
+    --Secundario: #4CD849;
+    --Oscuro: #4D1926;
+    --Medio-oscuro: #732639;
+    --Medio: #A1455B;
+    --Claro: #D9A6B2;
+    --Fondo: #F6EAED;
+    --Blanquesino: #FCF8F9;
+    --Blanco: #FFFFFF;
+}
+
+/*Agregamos los estilos de celular*/
+
+.main {
+    overflow: hidden;
+    padding: 24px;
+
+}
+
+.banner{
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-bottom: 20px;
+
+    .usuario {
+        background-color: var(--Fondo);
+        padding: 20px;
+        border-radius: 20px;
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem; 
+    
+        .img{
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 60%;
+        }
+            
+        .datos{
+    
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+    
+            .datos__nombre{
+               display: flex;
+               flex-direction: column;
+               gap: 8px;
+    
+    
+               h1 {
+                   font-size: 24px;
+                    text-align: center;
+                    color: var(--Medio-oscuro);
+                }
+    
+            p {
+            
+                font-size: 16px;
+                text-align: center;
+            }
+    
+    
+    
+            }
+    
+            .Datos__icons {
+                display: flex;
+                justify-content: center;
+                gap: 16px;
+    
+                a {
+                    font-size: 24px;
+                    line-height: 24px;
+                    color: var(--Medio-oscuro);
+                    transition: .3s ease-in-out;
+                }
+    
+                a:hover {
+                    color: var(--primario);
+                }
+            }
+    
+            .datos__cv {
+                display: flex;
+                justify-content: center;
+    
+                a{
+                   background-color: var(--primario); 
+                   padding: 8px 16px;
+                   border-radius: 8px;
+                   color: var(--Blanco);
+                   font-weight: 500;
+                   width: max-content;
+                   transition: .3s ease-in-out;
+    
+    
+                   a:hover {
+                    color: var(--Medio-oscuro);
+                      background-color: var(--Secundario);
+                   }
+                }
+            }
+    
+        }
+    
+        }
+    
+        .titular{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+
+            p{
+                text-align: center;
+                color: var(--Medio-oscuro);
+                font-size: 16px;
+
+            } 
+        
+
+            h2{
+                text-align: center;
+                font-size: 20px;
+            }
+        }
+}
+
+.proyectos{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 16px;
+
+    .card {
+        background-color: var(--Fondo);
+        border-radius: 16px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+
+        img{
+            height: 95px;
+            object-fit: cover;
+            border-radius: 8px;
+
+
+        }
+
+        .info{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            h2{
+             
+                font-size: 16px;
+            text-align: center;
+            color: var(--Medio-oscuro)
+         }
+            
+
+        }
+
+        a{
+            background-color: var(--primario);
+            font-size: 12px;
+            padding: 4px 12px;
+            border-radius: 8px;
+            color: var(--Blanco);
+             width: 100%;
+             min-width: max-content;
+             text-align: center;
+             transition: .3s ease-in-out;
+        }
+
+        a:hover{
+            background-color: var(--Secundario);
+            color:var(--Medio-oscuro)
+        }
+
+        p{
+            font-size: 12px;
+            text-align: center;
+            color: var(--Medio);
+        }
+
+
+    }   
+
+}
+
+
+/*Agregamos los estilos en modo escritorio*/
+@media screen and (min-width: 1024px){
+
+    .main{
+        padding: 64px;
+    }
+
+    .banner{
+        background-color: var(--Fondo);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-radius: 24px;
+        padding: 32px;
+        .usuario{
+
+        
+            padding: 0px;
+           flex-direction: row;
+           background-color: inherit;
+           /*background-color: red;*/
+           border-radius: 0px;
+           padding-right: 64px;
+           margin-right: 64px;
+           border-right: 1px solid var(--Claro);
+           
+           
+    
+           img{
+             width: 180px;
+             height: 180px;
+           }
+    
+           .datos {
+    
+              .datos__nombre {
+              
+                h1 {
+                    text-align: left;
+                    font-size: 32px;
+                }
+            }
+                p {
+                    text-align: 20px;
+                    font-size: 20px;
+                }
+    
+              .Datos__icons{
+                justify-content: flex-start;
+              }
+    
+              .datos__cv {
+                justify-content: flex-start;
+    
+                a{
+                    font-size: 16;
+                }
+              }
+           }
+    
+        }
+    }   
+    
+    .proyectos{
+       grid-template-columns: repeat(3, 1fr);
+        grid-gap: 24px;
+
+        .card {
+            border-radius: 24px;
+            padding: 20px;
+             gap: 24px;
+    
+            img{
+                width: 100px;
+                height: inherit;
+                aspect-ratio: 4 /2.5;
+                object-fit: cover;
+                border-radius: 12px;
+    
+    
+            }
+    
+            .info{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+    
+                h2{
+                 
+                    font-size: 16px;
+                text-align: center;
+                color: var(--Medio-oscuro)
+             }
+                
+    
+            }
+    
+            a{
+                background-color: var(--primario);
+                font-size: 20px;
+                padding: 16px 32px;
+                border-radius: 12px;
+                 width: max-content;
+                 min-width: max-content;
+                 text-align: center;
+            }
+    
+            a:hover{
+                background-color: var(--Secundario);
+                color:var(--Medio-oscuro)
+            }
+    
+            p{
+                font-size: 16px;
+                text-align: center;
+                color: var(--Medio);
+            }
+    
+    
+        }   
+    
+
+        .card {
+            background-color: var(--Fondo);
+        }
+    }
+        .titular{
+            display: flex;
+            gap: 8px;
+            flex-direction: column;
+
+            p{
+               font-size: 20px;
+              color: var(--Medio-oscuro);
+              text-align: left;
+            }
+
+            h2{
+                font-size: 32px;
+                color: var(--Medio-oscuro);
+            text-align: left;
+            }
+
+
+        }
+
+        
+
+
+
+}
+        
+    
+ 
